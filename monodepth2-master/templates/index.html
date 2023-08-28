@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Room Creator</title>
+</head>
+<body>
+    <h1>3D Room Creator</h1>
+    <label for="size">평수: </label>
+    <input type="number" id="size" required>
+    <button id="createRoomButton">방 생성</button>
+    <button id="deleteRoomButton">방 삭제</button>
+    <button id="moveLeft">좌로</button>
+    <button id="moveRight">우로</button>
+    <button id="moveUp">상으로</button>
+    <button id="moveDown">하로</button>
+    <div id="sceneContainer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById("sceneContainer").appendChild(renderer.domElement);
+
+        let ceiling, floor, frontWall, sideWall;
+
+        camera.position.z = 2;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+
+        document.getElementById("createRoomButton").addEventListener("click", () => {
+            const size = parseFloat(document.getElementById("size").value);
+            if (!isNaN(size)) {
+                // 기존의 방을 삭제
+                if (ceiling) scene.remove(ceiling);
+                if (floor) scene.remove(floor);
+                if (frontWall) scene.remove(frontWall);
+                if (sideWall) scene.remove(sideWall);
+
+                // 새로운 천장과 바닥 생성
+                ceiling = new THREE.Mesh(new THREE.BoxGeometry(size, 1, size), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+                ceiling.position.y = size / 2;
+                scene.add(ceiling);
+
+                floor = new THREE.Mesh(new THREE.BoxGeometry(size, 1, size), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+                floor.position.y = -size / 2;
+                scene.add(floor);
+
+                // 새로운 전면 벽 생성
+                frontWall = new THREE.Mesh(new THREE.BoxGeometry(size, size, 0.1), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+                frontWall.position.z = -size / 2;
+                scene.add(frontWall);
+
+                // 새로운 측면 벽 생성
+                sideWall = new THREE.Mesh(new THREE.BoxGeometry(0.1, size, size), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+                sideWall.position.x = -size / 2;
+                scene.add(sideWall);
+
+                animate();
+            }
+        });
+
+        document.getElementById("deleteRoomButton").addEventListener("click", () => {
+            // 기존의 방을 삭제
+            if (ceiling) scene.remove(ceiling);
+            if (floor) scene.remove(floor);
+            if (frontWall) scene.remove(frontWall);
+            if (sideWall) scene.remove(sideWall);
+            animate();
+        });
+
+        document.getElementById("moveLeft").addEventListener("click", () => {
+            camera.position.x -= 0.5;
+            animate();
+        });
+
+        document.getElementById("moveRight").addEventListener("click", () => {
+            camera.position.x += 0.5;
+            animate();
+        });
+
+        document.getElementById("moveUp").addEventListener("click", () => {
+            camera.position.y += 0.5;
+            animate();
+        });
+
+        document.getElementById("moveDown").addEventListener("click", () => {
+            camera.position.y -= 0.5;
+            animate();
+        });
+
+        animate();
+
+    </script>
+</body>
+</html>
+
+
+
