@@ -4,3 +4,4 @@ dataset/
 dataset_origin/
 resnet18_unet_local.pth
 resnet18_unet.pth
+__pycache__/
