@@ -1,0 +1,35 @@
+[I 19:33:56.262 NotebookApp] Writing notebook server cookie secret to /home/MMI24limbyungwan/.local/share/jupyter/runtime/notebook_cookie_secret
+[I 2023-11-08 19:33:56.717 LabApp] JupyterLab extension loaded from /home/mmi/anaconda3/lib/python3.9/site-packages/jupyterlab
+[I 2023-11-08 19:33:56.717 LabApp] JupyterLab application directory is /home/mmi/anaconda3/share/jupyter/lab
+[I 19:33:56.720 NotebookApp] Serving notebooks from local directory: /home/MMI24limbyungwan/Design_Project/Design_project
+[I 19:33:56.720 NotebookApp] Jupyter Notebook 6.4.12 is running at:
+[I 19:33:56.720 NotebookApp] http://localhost:8888/?token=90cfabd37955cf40e9279fd856164b2e7fd126d8aa3c7ba4
+[I 19:33:56.720 NotebookApp]  or http://127.0.0.1:8888/?token=90cfabd37955cf40e9279fd856164b2e7fd126d8aa3c7ba4
+[I 19:33:56.720 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 19:33:56.723 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/MMI24limbyungwan/.local/share/jupyter/runtime/nbserver-892670-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=90cfabd37955cf40e9279fd856164b2e7fd126d8aa3c7ba4
+     or http://127.0.0.1:8888/?token=90cfabd37955cf40e9279fd856164b2e7fd126d8aa3c7ba4
+[I 19:34:07.125 NotebookApp] Interrupted...
+[I 19:34:07.126 NotebookApp] Shutting down 0 kernels
+[I 19:34:07.126 NotebookApp] Shutting down 0 terminals
+[I 2023-11-08 19:35:31.656 LabApp] JupyterLab extension loaded from /home/mmi/anaconda3/lib/python3.9/site-packages/jupyterlab
+[I 2023-11-08 19:35:31.656 LabApp] JupyterLab application directory is /home/mmi/anaconda3/share/jupyter/lab
+[I 19:35:31.659 NotebookApp] Serving notebooks from local directory: /home/MMI24limbyungwan/Design_Project/Design_project
+[I 19:35:31.659 NotebookApp] Jupyter Notebook 6.4.12 is running at:
+[I 19:35:31.659 NotebookApp] http://localhost:8888/?token=34892aa9abfa9183812dec1ce5e9d4eda2c45aae4c9a5c0b
+[I 19:35:31.659 NotebookApp]  or http://127.0.0.1:8888/?token=34892aa9abfa9183812dec1ce5e9d4eda2c45aae4c9a5c0b
+[I 19:35:31.659 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 19:35:31.662 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/MMI24limbyungwan/.local/share/jupyter/runtime/nbserver-893069-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=34892aa9abfa9183812dec1ce5e9d4eda2c45aae4c9a5c0b
+     or http://127.0.0.1:8888/?token=34892aa9abfa9183812dec1ce5e9d4eda2c45aae4c9a5c0b
+[I 19:35:47.128 NotebookApp] Interrupted...
+[I 19:35:47.129 NotebookApp] Shutting down 0 kernels
+[I 19:35:47.129 NotebookApp] Shutting down 0 terminals
